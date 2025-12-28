@@ -57,6 +57,29 @@
   (setq company-selection-wrap-around t)
   (setq company-transformers '(company-sort-by-occurrence)))
 
+(use-package lsp-mode
+  :ensure t
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  :hook (
+	 (lsp-mode . lsp-enable-which-key-integration))
+  :commands (lsp lsp-deferred))
+
+(use-package lsp-ui
+  :ensure t
+  :after (lsp-mode)
+  :config
+  (setq lsp-ui-doc-position 'top))
+
+(use-package projectile
+  :ensure t
+  :init
+  ; (setq projectile-project-search-path '("~/projects/" "~/work/" "~/playground"))
+  :config
+  (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+  (global-set-key (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode +1))
+
 (use-package centaur-tabs
   :ensure t
   :demand
@@ -76,9 +99,12 @@
 (use-package catppuccin-theme
   :ensure t)
 
+(use-package cmake-mode
+  :ensure t)
+
 (load-theme 'catppuccin :no-confirm)
 
-(setq custom-file "~/.config/emacs/custom.el")
+(setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
 
 (provide 'init)
