@@ -1,3 +1,9 @@
 eln-cache/
 transient/
 elpa/
+auto-save-list/
+org-persist/
+ielm-history.eld
+projectile-bookmarks.eld
+flycheck_*.el
+recentf
