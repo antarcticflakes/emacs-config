@@ -54,6 +54,17 @@
   :config
   (setq lsp-ui-doc-position 'top))
 
+(use-package lsp-ivy
+  :ensure t
+  :after (lsp-mode))
+
+(use-package flycheck
+  :ensure t
+  :config
+  (setq truncate-lines nil)
+  :hook
+    (prog-mode . flycheck-mode))
+
 (use-package projectile
   :ensure t
   :init
@@ -79,7 +90,19 @@
   :bind
   ("C-x t" . neotree-toggle))
 
+(use-package dashboard
+  :ensure t
+  :config
+  (setq dashboard-banner-logo-title "Welcome to Emacs!")
+  (setq dashboard-projects-backend 'projectile)
+  (setq dashboard-items '((recents  . 5)
+			  (bookmarks . 5)
+			  (projects . 10)))
+  (dashboard-setup-startup-hook))
+
 (use-package catppuccin-theme
   :ensure t)
 
 (provide 'packages)
+
+;;; packages.el ends here
