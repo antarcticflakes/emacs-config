@@ -1,3 +1,11 @@
+;;; packages --- Summary
+;;;
+;;; the packages.
+;;;
+;;; Commentary:
+;;;
+;;; Code:
+
 (require 'package)
 (setq package-archives '(("gnu"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")
                          ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")))
@@ -93,7 +101,7 @@
 (use-package dashboard
   :ensure t
   :config
-  (setq dashboard-banner-logo-title "Welcome to Emacs!")
+  (setq dashboard-banner-logo-title "Welcome to GNU Emacs Operating System!")
   (setq dashboard-projects-backend 'projectile)
   (setq dashboard-items '((recents  . 5)
 			  (bookmarks . 5)

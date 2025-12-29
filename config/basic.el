@@ -1,3 +1,11 @@
+;;; basic --- Summary
+;;;
+;;; The basic editor settings.
+;;;
+;;; Commentary:
+;;;
+;;; Code:
+
 (setq confirm-kill-emacs #'yes-or-no-p)
 (electric-pair-mode t)
 (add-hook 'prog-mode-hook #'show-paren-mode)
@@ -9,8 +17,9 @@
 (setq make-backup-files nil)
 (global-display-line-numbers-mode 1)
 (when (display-graphic-p)
-  (toggle-scroll-bar -1)
   (menu-bar-mode -1)
   (tool-bar-mode -1))
 
 (provide 'basic)
+
+;;; basic.el ends here

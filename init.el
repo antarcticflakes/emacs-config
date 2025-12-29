@@ -1,4 +1,10 @@
-;; Basic Configuration
+;;; init --- Summary
+;;;
+;;; The editor init configs
+;;;
+;;; Commentary:
+;;;
+;;; Code:
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 
@@ -12,3 +18,5 @@
 (load custom-file)
 
 (provide 'init)
+
+;;; init.el ends here
