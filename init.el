@@ -8,9 +8,9 @@
 
 (add-to-list 'load-path (expand-file-name "config" user-emacs-directory))
 
-(require 'basic)
-(require 'packages)
-(require 'languages)
+(require 'basic-init)
+(require 'packages-init)
+(require 'languages-init)
 
 (load-theme 'catppuccin :no-confirm)
 

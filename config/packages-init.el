@@ -6,6 +6,7 @@
 ;;;
 ;;; Code:
 
+;; Package mirrors
 (require 'package)
 (setq package-archives '(("gnu"   . "http://mirrors.ustc.edu.cn/elpa/gnu/")
                          ("melpa" . "http://mirrors.ustc.edu.cn/elpa/melpa/")))
@@ -44,7 +45,6 @@
   (setq company-minimum-prefix-length 1)
   (setq company-tooltip-align-annotations t)
   (setq company-idle-delay 0.0)
-  (setq company-show-numbers t)
   (setq company-selection-wrap-around t)
   (setq company-transformers '(company-sort-by-occurrence)))
 
@@ -111,6 +111,6 @@
 (use-package catppuccin-theme
   :ensure t)
 
-(provide 'packages)
+(provide 'packages-init)
 
-;;; packages.el ends here
+;;; packages-init.el ends here
