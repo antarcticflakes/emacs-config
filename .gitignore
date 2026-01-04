@@ -3,6 +3,7 @@ transient/
 elpa/
 auto-save-list/
 org-persist/
+url/
 ielm-history.eld
 projectile-bookmarks.eld
 flycheck_*.el
