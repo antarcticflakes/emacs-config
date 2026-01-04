@@ -8,3 +8,4 @@ ielm-history.eld
 projectile-bookmarks.eld
 flycheck_*.el
 recentf
+custom.el
