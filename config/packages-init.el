@@ -21,6 +21,7 @@
   :ensure t
   :hook (prog-mode . rainbow-delimiters-mode))
 
+;;; Use C-z to switch between emacs and evil mode.
 (use-package evil
   :ensure t
   :init
@@ -65,6 +66,18 @@
 (use-package lsp-ivy
   :ensure t
   :after (lsp-mode))
+
+(use-package avy
+  :ensure t
+  ;; :bind
+  ;; (("M-j C-SPC" . avy-goto-char-timer))
+  )
+
+(use-package marginalia
+  :ensure t
+  :init (marginalia-mode)
+  :bind (:map minibuffer-local-map
+	      ("M-A" . marginalia-cycle)))
 
 (use-package flycheck
   :ensure t
