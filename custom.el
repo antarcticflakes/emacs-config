@@ -8,7 +8,11 @@
  '(custom-safe-themes
    '("45631691477ddee3df12013e718689dafa607771e7fd37ebc6c6eb9529a8ede5"
      default))
- '(package-selected-packages nil))
+ '(package-selected-packages
+   '(all-the-icons catppuccin-theme centaur-tabs cmake-mode company
+		   dashboard evil-collection flycheck go-mode
+		   good-scroll lsp-ivy lsp-ui neotree projectile
+		   rainbow-delimiters)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

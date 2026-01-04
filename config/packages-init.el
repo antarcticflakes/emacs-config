@@ -108,6 +108,17 @@
 			  (projects . 10)))
   (dashboard-setup-startup-hook))
 
+;;; For first run, execute this command:
+;;; M-x all-the-icons-install-fonts
+(use-package all-the-icons
+  :ensure t
+  :if (display-graphic-p))
+
+(use-package good-scroll
+  :ensure t
+  :if window-system
+  :init (good-scroll-mode))
+
 (use-package catppuccin-theme
   :ensure t)
 
